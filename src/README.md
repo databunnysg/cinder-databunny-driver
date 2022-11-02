@@ -8,6 +8,8 @@ And published as pypi package databunnystoragedriver https://pypi.org/project/da
 
 > **Note**: The driver code forked from https://github.com/iXsystems/cinder (support freenas 11.3).   
 
+[![Alt text](https://img.youtube.com/vi/B5XjPMOJmtE/0.jpg)](https://www.youtube.com/watch?v=B5XjPMOJmtE)
+
 # Usage  
 Usage is simple:  
 Step 1:  
