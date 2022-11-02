@@ -1,12 +1,14 @@
 # Overview  
 
+# Overview  
+
  This is cinder storage driver charm support to use freenas/truenas core/truenas scale integration for OpenStack Block Storage.  
  Cinder is the block storage service for the Openstack project.  
 
-Driver was repackaged to https://github.com/databunnysg/databunnystoragedriver with further fix to support Truenas core/Truenas scale.   
-And published as pypi package databunnystoragedriver https://pypi.org/project/databunnystoragedriver/.  
+Driver was repackaged to [https://github.com/databunnysg/databunnystoragedriver](https://github.com/databunnysg/databunnystoragedriver) with further fix to support Truenas core/Truenas scale.   
+And published as pypi package [pypi databunnystoragedriver package](https://pypi.org/project/databunnystoragedriver/).  
 
-> **Note**: The driver code forked from https://github.com/iXsystems/cinder (support freenas 11.3).   
+> **Note**: The driver code forked from (ixsystems cinder driver)[https://github.com/iXsystems/cinder] (support freenas 11.3).   
 
 [![Alt text](https://img.youtube.com/vi/B5XjPMOJmtE/0.jpg)](https://www.youtube.com/watch?v=B5XjPMOJmtE)
 
