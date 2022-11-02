@@ -1,0 +1,41 @@
+name: cinder-databunny-driver
+summary: This is cinder storage driver charm support to use freenas/truenas core/truenas scale integration for OpenStack Block Storage.
+maintainer: Yi Huang <yi@databunny.sg>
+description: |
+ This is cinder storage driver charm support to use freenas/truenas core/truenas scale integration for OpenStack Block Storage.
+ Cinder is the block storage service for the Openstack project.
+ .
+  The driver code forked from https://github.com/iXsystems/cinder (only support freenas 11.3). 
+  Driver was repackaged to https://github.com/databunnysg/databunnystoragedriver with further fix to support Truenas core/Truenas scale. 
+  And published as pypi package databunnystoragedriver https://pypi.org/project/databunnystoragedriver/.
+  Usage is simple:
+  Step 1:
+  Create or modify a driver config file, lets say: driverconfigfile.yaml
+  Modify the config paramerter to exactly match your freenas/truenas configuration.
+  Step 2:
+  juju deploy cinder-databunny-driver
+  juju add-relation cinder-databunny-driver:storage-backend cinder:storage-backend
+  juju config cinder-databunny-driver --file=driverconfigfile.yaml
+  Step 3:
+  waiting for cinder-databunny-driver become active
+  login to openstack dashboard, create volume type and Update Volume Type Metadata volume_backend_name databunnystorage
+  
+  Wait for cinder-databunny-driver juju status become active and now you can use openstack dashboard create volume with volume type databunnystore, those volume will be provision and managed by freenas/truenas
+tags:
+  - openstack
+  - storage
+  - file-servers
+  - misc
+series:
+  - focal
+  - jammy
+  - kinetic
+subordinate: True
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container

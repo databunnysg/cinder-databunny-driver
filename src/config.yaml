@@ -1,0 +1,98 @@
+"options":
+  "volume_driver":
+    "type": "string"
+    "default": "driver.iscsi.FreeNASISCSIDriver"
+    "description": "Cinder driver python class"
+  "volume-backend-name":
+    "type": "string"
+    "default": "databunnystorage"
+    "description": "Service name to present to Cinder"
+  "ixsystems_server_hostname":
+    "type": "string"
+    "default": !!null ""
+    "description": |
+      Host name for the storage controller
+  "ixsystems_server_port":
+    "type": "string"
+    "default": !!null ""
+    "description": "Port number for the storage controller API endpoint. Normally 80 or 443 depends on storage server settings"
+  "ixsystems_server_iscsi_port":
+    "type": "string"
+    "default": "3260"
+    "description": |
+      ISCSI port number for the storage controller
+  "ixsystems_api_version":
+    "type": "string"
+    "default": "2.0"
+    "description": |
+      FREENAS API version.
+  "ixsystems_volume_backend_name":
+    "type": "string"
+    "default": "databunnystorage"
+    "description": |
+      Backend Storage Controller Name
+  "ixsystems_vendor_name":
+    "type": "string"
+    "default": "iXsystem"
+    "description": |
+      vendor name on Storage controller
+  "ixsystems_storage_protocol":
+    "type": "string"
+    "default": "iscsi"
+    "description": |
+      storage protocol on Storage controller
+  "ixsystems_transport_type":
+    "type": "string"
+    "default": "http"
+    "description": |
+      Transport type protocol for port 80 should be http, for port 443 should be https.
+  "ixsystems_login":
+    "type": "string"
+    "default": "root"
+    "description": |
+      User name for the storage controller
+  "ixsystems_password":
+    "type": "string"
+    "default": !!null ""
+    "description": |
+      Password for the storage controller
+  "ixsystems_datastore_pool":
+    "type": "string"
+    "default": !!null ""
+    "description": |
+      Storage controller datastore pool name
+  "ixsystems_dataset_path":
+    "type": "string"
+    "default": !!null ""
+    "description": |
+      Datasset full path name including pool. For example poolname/dataset
+  "ixsystems_reserved_percentage":
+    "type": "string"
+    "default": !!null "0"
+    "description": |
+      Reserved space on Storage controller
+  "ixsystems_iqn_prefix":
+    "type": "string"
+    "default": !!null "iqn.2005-10.org.freenas.ctl"
+    "description": |
+      Storage controller iSCSI Qualified Name prefix'
+  "ixsystems_portal_id":
+    "type": "string"
+    "default": !!null "1"
+    "description": |
+      Storage controller iSCSI portal ID
+  "ixsystems_initiator_id":
+    "type": "string"
+    "default": !!null "1"
+    "description": |
+      Storage controller iSCSI Initiator ID 
+  "iscsi_helper":
+    "type": "string"
+    "default": !!null "tgtadm"
+    "description": |
+       iSCSI target user-land tool to use. tgtadm is default, use lioadm for LIO iSCSI support, scstadmin for SCST target support, ietadm for iSCSI Enterprise Target, iscsictl for Chelsio iSCSI Target or fake for testing. 
+  "volume_dd_blocksize":
+    "type": "string"
+    "default": !!null "512"
+    "description": |
+      The default block size used when copying/clearing volumes                    
