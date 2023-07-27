@@ -18,7 +18,7 @@ Step 1:
   Create or modify a driver config file, lets say: driverconfigfile.yaml  
   Modify the config paramerter to exactly match your freenas/truenas configuration.  
 Step 2:  
-  juju deploy cinder-databunny-driver  
+  juju deploy ch:cinder-databunny-driver
   juju add-relation cinder-databunny-driver:storage-backend cinder:storage-backend  
   juju config cinder-databunny-driver --file=driverconfigfile.yaml  
 Step 3:  
