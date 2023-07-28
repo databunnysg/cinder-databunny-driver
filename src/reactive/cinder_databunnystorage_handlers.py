@@ -31,7 +31,7 @@ charms_openstack.charm.use_defaults(
 @charms.reactive.when_not('storagedriver.installed')
 def installdriver():
     #make sure driver is installed in parent environment not .venv 
-    completeprocess = subprocess.run("/usr/bin/pip install databunnystoragedriver", shell=True)
+    completeprocess = subprocess.run("sudo /usr/bin/pip install databunnystoragedriver", shell=True)
     if completeprocess.returncode == 0:
         charms.reactive.set_flag("storagedriver.installed")
         hook.status_set(hook.WORKLOAD_STATES.WAITING,"Driver databunnystoragedriver successful installed")
