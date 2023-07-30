@@ -27,13 +27,6 @@ Step 3:
 
   Wait for cinder-databunny-driver juju status become active and now you can use openstack dashboard create volume with volume type databunnystore, those volume will be provision and managed by freenas/truenas  
 
-
-## Deployment  
-
-  This charm's primary use is as a backend for the cinder charm. To do so, add a relation betweeen both charms:  
-  juju deploy cinder-databunny-driver  
-  juju add-relation cinder-databunny-driver:storage-backend cinder:storage-backend  
-
 ## Configuration  
 
   Create a yaml config file with configuration reflecting your freenas/truenas configuration  
