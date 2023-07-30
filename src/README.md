@@ -5,10 +5,10 @@
 
  Charmhub repository link: https://charmhub.io/cinder-databunny-driver
 
-Driver was repackaged to [https://github.com/databunnysg/databunnystoragedriver](https://github.com/databunnysg/databunnystoragedriver) with further fix to support Truenas core/Truenas scale.   
+Driver was repackaged to [https://github.com/databunnysg/databunnystoragedriver](https://github.com/databunnysg/databunnystoragedriver) with further fix to support Truenas core (tested freenas 11.3). Limited support on Truenas scale as for now! (maynot work)
 And published as pypi package [pypi databunnystoragedriver package](https://pypi.org/project/databunnystoragedriver/).  
 
-> **Note**: The driver code forked from (ixsystems cinder driver)[https://github.com/iXsystems/cinder] (support freenas 11.3).   
+> **Note**: The driver code forked from (ixsystems cinder driver)[https://github.com/iXsystems/cinder]   
 
 [![Alt text](https://img.youtube.com/vi/B5XjPMOJmtE/0.jpg)](https://www.youtube.com/watch?v=B5XjPMOJmtE)
 
