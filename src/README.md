@@ -1,4 +1,4 @@
-# Overview  
+t# Overview  
 
  This is cinder storage driver charm support to use freenas/truenas core/truenas scale integration for OpenStack Block Storage.  
  Cinder is the block storage service for the Openstack project.  
@@ -19,7 +19,7 @@ Step 1:
   Modify the config paramerter to exactly match your freenas/truenas configuration.  
 Step 2:  
   juju deploy ch:cinder-databunny-driver  
-  juju add-relation cinder-databunny-driver:storage-backend cinder:storage-backend  
+  juju relate cinder-databunny-driver:storage-backend cinder:storage-backend  
   juju config cinder-databunny-driver --file=driverconfigfile.yaml  
 Step 3:  
   waiting for cinder-databunny-driver become active  
