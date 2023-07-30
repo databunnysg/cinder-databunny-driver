@@ -36,7 +36,7 @@ Step 3:
   juju config cinder-databunny-driver --file=configfilesample.yaml  
 
 
-
+<pre>
   cinder-databunny-driver:  
     ixsystems_server_hostname : 10.0.50.211  
     ixsystems_server_port : "80"  
@@ -57,7 +57,7 @@ Step 3:
     iscsi_helper : tgtadm  
     volume_dd_blocksize : 1M  
     volume_driver : driver.iscsi.FreeNASISCSIDriver  
-
+</pre>
 # Documentation  
 
 
